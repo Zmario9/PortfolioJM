@@ -1,0 +1,200 @@
+//variables
+
+main{
+    margin-top: -1px;
+    background-color: rgba(63,94,251,1);
+    #textoAnimado{
+        display: flex;
+        justify-content: center;
+        #animatedText1, #animatedText2{
+            font-family: orangekid;
+        }
+    }
+    .parent{
+        display: flex;
+        margin: {
+            top: 10px;
+        }
+        span{
+            color:aqua;
+            font-family: orangekid;
+            margin-bottom: 20px;
+        }
+        p{
+            color: white;
+            font-family: orangekid;
+        }
+        #knowledges{
+            display: grid;
+            .know{
+                @for $j from 1 to 12 {
+                    &#{$j}{
+                        border: 1px solid transparent;
+                        div{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        #certificaciones{
+            display: flex;
+            #cadif1{
+                display: flex;
+                #cadif1logo{
+                    display: flex;
+                    background: linear-gradient(0deg, rgba(63,94,251,1) 3%, rgb(247, 246, 245) 57%, rgba(63,94,251,1) 97%);
+                }
+            }
+            span{
+                color: yellow;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){ //should be 280px
+    main{
+        //height: 160vh;
+        #textoAnimado {
+            #animatedText1, #animatedText2{
+                margin: 0;
+                font-family: orangekid;
+                font-size: 1.5em;
+            }
+        }
+        .parent {
+            flex-flow: nowrap column;  
+            //height: 500px;
+            align-items: center;
+            span{
+                font-size: 1.5em;         
+            }
+            p{
+                font-size: 1.3em;
+                margin: {
+                    right: 20px;
+                    left: 20px;
+                }
+            }
+            #knowledges{
+                width: 100%;
+                max-width: 300px; //250px
+                height: 50%;
+                grid-template-columns: 1fr 1fr 1fr 1fr; 
+                grid-template-rows: 1fr 1fr 1fr; 
+                gap: 10px 10px; 
+                grid-template-areas: 
+                  "div1 div2 div3 div4"
+                  "div5 div6 div7 div8"
+                  "div9 div10 div11 div12"; 
+                  .know{
+                    &1 { grid-area: div1; }
+                    &2 { grid-area: div2; }
+                    &3 { grid-area: div3; }
+                    &4 { grid-area: div4; }
+                    &5 { grid-area: div5; }
+                    &6 { grid-area: div6; }
+                    &7 { grid-area: div7; }
+                    &8 { grid-area: div8; }
+                    &9 { grid-area: div9; }
+                    &10 { grid-area: div10; }
+                    &11 { grid-area: div11; }
+                    &12 { grid-area: div12; }
+                  }
+            }
+            #certificaciones{
+                flex-flow: nowrap column;
+                align-items: center;
+                width: 100%;
+                #cadif1{
+                    flex-flow: nowrap column;
+                    align-items: center; 
+                    width: 100%;
+                    #cadif1logo{
+                        flex-flow: nowrap row;
+                        justify-content: center;
+                        width: 100%;
+                        img {
+                            width: 40%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (min-width:361px) /*and (max-width: 768px)*/{
+    main{
+        #textoAnimado {
+            #animatedText1, #animatedText2{
+                font-size: 1.8em;
+            }
+        }
+        .parent{
+            flex-flow: nowrap column;
+            //height: 200vh;
+            align-items: center;
+            span{
+                color:aqua;
+                font-size: 1.8em;
+                font-family: orangekid;
+            }
+            p{
+                margin: {
+                    right: 20px;
+                    left: 20px;
+                }
+                color: white;
+                font-family: orangekid;
+                font-size: 1.7em;
+            }     
+            #knowledges{
+                max-width: 500px; //300px
+                height: 60%;
+                width: 100%;
+                grid-template-columns: 1fr 1fr 1fr 1fr; 
+                grid-template-rows: 1fr 1fr 1fr; 
+                gap: 10px 10px; 
+                grid-template-areas: 
+                  "div1 div2 div3 div4"
+                  "div5 div6 div7 div8"
+                  "div9 div10 div11 div12"; 
+                  .know{
+                    &1 { grid-area: div1; }
+                    &2 { grid-area: div2; }
+                    &3 { grid-area: div3; }
+                    &4 { grid-area: div4; }
+                    &5 { grid-area: div5; }
+                    &6 { grid-area: div6; }
+                    &7 { grid-area: div7; }
+                    &8 { grid-area: div8; }
+                    &9 { grid-area: div9; }
+                    &10 { grid-area: div10; }
+                    &11 { grid-area: div11; }
+                    &12 { grid-area: div12; }
+                  }
+            }
+            #certificaciones{
+                flex-flow: nowrap column;
+                align-items: center;
+                width: 100%;
+                #cadif1{
+                    flex-flow: nowrap column;
+                    align-items: center; 
+                    width: 100%;
+                    #cadif1logo{
+                        flex-flow: nowrap row;
+                        justify-content: center;
+                        width: 100%;
+                        img {
+                            width: 40%;
+                            max-width:30vh;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}

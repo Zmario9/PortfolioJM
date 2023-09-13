@@ -1,4 +1,48 @@
-<p>main works!</p>
+<main>
+    <div id="textoAnimado">
+        <p id="animatedText1"></p>
+        <p id="animatedText2"></p>
+    </div>
+    <section class="parent">
+        <span>¿Quien soy?</span>
+        <article>
+            <p>
+                Soy un desarrollador web, me gusta mucho el diseño y la
+                programación. Me encanta trabajar en equipo y aprender de los demás.
+            </p>
+        </article>
+        <span>¿Cuales son mis conocimientos?</span>
+        <article id="knowledges">
+            <div class="know{{i+1}}" *ngFor="let know of conocimientos; let i=index">
+                <div>
+                    <img [src]="know.src" alt="{{know.nombre}}" style="width: 100%">
+                </div>
+            </div>
+        </article>
+       <span>Certificaciones</span>
+       <article id="certificaciones">
+            <div id="cadif1">
+                <span>Front-End</span>
+                <div id="cadif1logo">
+                    <img src="../../../assets/img/logo-cadif1.svg" alt="">
+                </div>
+                <p>
+                    - Obtencion de los certificados de:
+                </p>
+                <div class="certificados" *ngFor="let certs of certsCadif1; let i=index">
+                    <p style="color: {{certs.color}}">{{certs.name}}</p>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+            <div>
+
+
+            </div>
+       </article>
+    </section>
+</main>
 <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
     <mdb-carousel-item>
       <img
