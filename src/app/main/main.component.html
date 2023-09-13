@@ -30,7 +30,8 @@
                     - Obtencion de los certificados de:
                 </p>
                 <div class="certificados" *ngFor="let certs of certsCadif1; let i=index">
-                    <p style="color: {{certs.color}}">{{certs.name}}</p>
+                    <!-- <p style="color: {{certs.color}}">{{certs.name}}</p> -->
+                    <button type="button" class="btn {{certs.color}}" mdbRipple>{{certs.name}}</button>
                 </div>
             </div>
             <div>

@@ -60,15 +60,15 @@ export class MainComponent {
 certsCadif1 =[
   {
     name:'Programador Junior',
-    color:'greenyellow'
+    color:'btn-success'
   },
   {
     name:'Programador Front-End Junior',
-    color:'gold'
+    color:'btn-warning'
   },
   {
     name:'Programador Front-End Master',
-    color:'purple'
+    color:'btn-danger'
   }
 ];
 
