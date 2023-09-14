@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { Router } from '@angular/router';
 import Typewriter from 't-writer.js';
 
 @Component({
@@ -11,19 +12,44 @@ import Typewriter from 't-writer.js';
 export class MainComponent {
   modalRef: MdbModalRef<ModalComponent> | null = null;
 
-  constructor(private modalService: MdbModalService) {}
+  //Servicio de modal y ruta.
+  constructor(private modalService: MdbModalService, private router: Router) {}
 
   openModal(evento) {
-    console.log(evento.srcElement);
-    this.modalRef = this.modalService.open(ModalComponent,{
-      data:{
-        title: this.certsCadif1[evento.srcElement.id-1].name,//Titulo del certificado
-        src: this.certsCadif1[evento.srcElement.id-1].source,//Source de la imagen del certificado
-        bgColor: "bg-info", //Color del fondo del modal
-        titleColor: "text-light"
-      },
-      modalClass: 'modal-dialog-centered modal-lg' //centra el modal
-    })
+    //console.log(evento.srcElement);
+    //console.log(this.router.config[1].path);
+    
+    //Saber si el boton al que se le dio click es el boton de las certificaciones.
+    console.log(evento.srcElement.className.includes("certsBtn")); 
+    /*
+      Verifico la ruta de origen del llamado de ese modal es HOME para evitar que posiblemente se ejecute en 
+      otros componentes, y tambien verifico que en este caso sea el caso 1 de que el boton sea de las certificaciones.
+      (Esto ultimo obtenido gracias al metodo de strings "includes").
+    */
+    if(this.router.url === "/home" && evento.srcElement.className.includes("certsBtn")){
+      //console.log(this.router.url);
+      //Creo una variable que guarde la url del componente actual.
+      const ruta = this.router.url;
+      //Abro el modal en base a los datos recibidos en este componente.
+      this.modalRef = this.modalService.open(ModalComponent,{
+        data:{
+          //Titulo del certificado
+          title: this.certsCadif1[evento.srcElement.id-1].name,
+          //Source de la imagen del certificado
+          src: this.certsCadif1[evento.srcElement.id-1].source,
+          //Color del fondo del modal
+          bgColor: "bg-info", 
+          //Color del texto del titulo
+          titleColor: "text-light", 
+          //Ruta de donde se pide el modal para manejar el uso
+          path: ruta 
+        },
+        //centra el modal
+        modalClass: 'modal-dialog-centered modal-lg' 
+      });
+    }
+
+    
   }
   conocimientos = [
     {

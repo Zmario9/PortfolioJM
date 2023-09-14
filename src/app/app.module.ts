@@ -1,8 +1,10 @@
+// ANGULAR ESSENTIALS
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+//APP COMPONENTE
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//MDB MODULES
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -19,6 +21,7 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//COMPONENTS
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';

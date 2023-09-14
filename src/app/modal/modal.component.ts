@@ -11,5 +11,6 @@ export class ModalComponent {
   src: string | null = null;
   bgColor: string | null = null;
   titleColor: string | null = null;
+  path: string | null = null;
   constructor(public modalRef: MdbModalRef<ModalComponent>) {}
 }

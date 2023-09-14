@@ -84,6 +84,7 @@ header{
                 font-family: orangekid;
                 color: rgb(100, 18, 100);
                 transition: 1s;
+                cursor: pointer;
                 &:hover{    
                     background-image: conic-gradient(
                         from var(--border-angle),
