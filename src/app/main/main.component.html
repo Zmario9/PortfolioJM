@@ -31,11 +31,11 @@
                 </p>
                 <div class="certificados" *ngFor="let certs of certsCadif1; let i=index">
                     <!-- <p style="color: {{certs.color}}">{{certs.name}}</p> -->
-                    <button type="button" class="btn {{certs.color}}" mdbRipple>{{certs.name}}</button>
+                    <button type="button" id="{{certs.id}}" (click)="openModal($event)" class="btn {{certs.color}}" mdbRipple>{{certs.name}}</button>
                 </div>
             </div>
             <div>
-                
+
             </div>
             <div>
 

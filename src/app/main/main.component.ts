@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import Typewriter from 't-writer.js';
 
 @Component({
@@ -7,6 +9,22 @@ import Typewriter from 't-writer.js';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  modalRef: MdbModalRef<ModalComponent> | null = null;
+
+  constructor(private modalService: MdbModalService) {}
+
+  openModal(evento) {
+    console.log(evento.srcElement);
+    this.modalRef = this.modalService.open(ModalComponent,{
+      data:{
+        title: this.certsCadif1[evento.srcElement.id-1].name,//Titulo del certificado
+        src: this.certsCadif1[evento.srcElement.id-1].source,//Source de la imagen del certificado
+        bgColor: "bg-info", //Color del fondo del modal
+        titleColor: "text-light"
+      },
+      modalClass: 'modal-dialog-centered modal-lg' //centra el modal
+    })
+  }
   conocimientos = [
     {
       nombre:'HTML5',
@@ -60,15 +78,21 @@ export class MainComponent {
 certsCadif1 =[
   {
     name:'Programador Junior',
-    color:'btn-success'
+    color:'btn-success',
+    id:"1",
+    source:"../../assets/img/fundamentos.jpg"
   },
   {
     name:'Programador Front-End Junior',
-    color:'btn-warning'
+    color:'btn-warning',
+    id:"2",
+    source:"../../assets/img/junior.jpg"
   },
   {
     name:'Programador Front-End Master',
-    color:'btn-danger'
+    color:'btn-danger',
+    id: "3",
+    source:"../../assets/img/master.jpg"
   }
 ];
 
