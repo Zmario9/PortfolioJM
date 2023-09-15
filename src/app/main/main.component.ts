@@ -15,17 +15,18 @@ export class MainComponent {
   //Servicio de modal y ruta.
   constructor(private modalService: MdbModalService, private router: Router) {}
 
-  openModal(evento) {
+  openModalMain(evento) {
     //console.log(evento.srcElement);
     //console.log(this.router.config[1].path);
     
     //Saber si el boton al que se le dio click es el boton de las certificaciones.
-    console.log(evento.srcElement.className.includes("certsBtn")); 
+    //console.log(evento.srcElement.className.includes("certsBtn")); 
     /*
       Verifico la ruta de origen del llamado de ese modal es HOME para evitar que posiblemente se ejecute en 
       otros componentes, y tambien verifico que en este caso sea el caso 1 de que el boton sea de las certificaciones.
       (Esto ultimo obtenido gracias al metodo de strings "includes").
     */
+    //MODAL DE CERTIFICACIONES
     if(this.router.url === "/home" && evento.srcElement.className.includes("certsBtn")){
       //console.log(this.router.url);
       //Creo una variable que guarde la url del componente actual.
@@ -42,14 +43,33 @@ export class MainComponent {
           //Color del texto del titulo
           titleColor: "text-light", 
           //Ruta de donde se pide el modal para manejar el uso
-          path: ruta 
+          path: ruta,
+          //Boton de origen
+          originBtn: "certsBtn"
         },
         //centra el modal
         modalClass: 'modal-dialog-centered modal-lg' 
       });
     }
 
-    
+    //MODAL DE CONOCIMIENTOS
+    if (this.router.url === "/home" && evento.srcElement.className.includes("btnKnows")){
+      const ruta = this.router.url;
+      console.log(evento.srcElement.src);
+      console.log(ruta);
+      console.log(evento.srcElement.className.includes("btnKnows"));
+      console.log("funciona");
+      this.modalRef = this.modalService.open(ModalComponent,{
+        data :{
+          //Ruta de donde se pide el modal para manejar el uso
+          path: ruta,
+          //Boton de origen
+          originBtn: "btnKnows",
+          //Ruta de la imagen de icono
+          srcImg: evento.srcElement.src
+        }
+      });
+    }
   }
   conocimientos = [
     {
@@ -103,19 +123,19 @@ export class MainComponent {
   ];
 certsCadif1 =[
   {
-    name:'Programador Junior',
+    name:'Programador',
     color:'btn-success',
     id:"1",
     source:"../../assets/img/fundamentos.jpg"
   },
   {
-    name:'Programador Front-End Junior',
+    name:'Desarrollador Front-End Junior',
     color:'btn-warning',
     id:"2",
     source:"../../assets/img/junior.jpg"
   },
   {
-    name:'Programador Front-End Master',
+    name:'Desarrollador Front-End Master',
     color:'btn-danger',
     id: "3",
     source:"../../assets/img/master.jpg"

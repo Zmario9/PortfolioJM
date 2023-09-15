@@ -15,7 +15,7 @@
         <article id="knowledges">
             <div class="know{{i+1}}" *ngFor="let know of conocimientos; let i=index">
                 <div>
-                    <img [src]="know.src" alt="{{know.nombre}}" style="width: 100%">
+                    <img class="btnKnows" (click)="openModalMain($event)" [src]="know.src" alt="{{know.nombre}}" style="width: 100%">
                 </div>
             </div>
         </article>
@@ -31,7 +31,7 @@
                 </p>
                 <div class="certificados" *ngFor="let certs of certsCadif1; let i=index">
                     <!-- <p style="color: {{certs.color}}">{{certs.name}}</p> -->
-                    <button type="button" id="{{certs.id}}" (click)="openModal($event)" class="btn {{certs.color}} certsBtn" mdbRipple>{{certs.name}}</button>
+                    <button type="button" id="{{certs.id}}" (click)="openModalMain($event)" class="btn {{certs.color}} certsBtn" mdbRipple>{{certs.name}}</button>
                 </div>
             </div>
             <div>

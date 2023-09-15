@@ -27,11 +27,14 @@ main{
         #knowledges{
             display: grid;
             .know{
-                @for $j from 1 to 12 {
+                @for $j from 1 to 13 {
                     &#{$j}{
                         border: 1px solid transparent;
                         div{
                             width: 100%;
+                            img{
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
