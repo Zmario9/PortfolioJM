@@ -89,7 +89,7 @@ export class MainComponent {
   conocimientos = [
     {
       nombre:'HTML5',
-      src:"../../assets/img/html.png",
+      src:"assets/img/html.png",
       description:[
         "Diseño de página web",
         "Manejo de frameworks",
@@ -108,7 +108,7 @@ export class MainComponent {
     },
     {
       nombre:'JavaScript',
-      src:'../../assets/img/javascript.png',
+      src:'assets/img/javascript.png',
       description:[
         "Uso de NodeJS",
         "Manejo de variables",
@@ -137,7 +137,7 @@ export class MainComponent {
     },
     {
       nombre:'CSS',
-      src:'../../assets/img/css.png',
+      src:'assets/img/css.png',
       description:[
         "Diseño responsivo con Bootstrap" ,
         "Flexbox",
@@ -154,7 +154,7 @@ export class MainComponent {
     },
     {
       nombre:'BootStrap',
-      src:'../../assets/img/bootstrap.png',
+      src:'assets/img/bootstrap.png',
       description:[
         "Utilidades de texto y fondo",
         "Flexbox Bootstrap",
@@ -171,7 +171,7 @@ export class MainComponent {
     },
     {
       nombre:'Github',
-      src:'../../assets/img/github.png',
+      src:'assets/img/github.png',
       description:[
         "Manejo de repositorios locales",
         "Commits",
@@ -185,7 +185,7 @@ export class MainComponent {
     },
     {
       nombre:'Jquery',
-      src:'../../assets/img/jquery.png',
+      src:'assets/img/jquery.png',
       description:[
         "Manejo del DOM con Jquery",
         "Manipular el HTML con Jquery",
@@ -195,7 +195,7 @@ export class MainComponent {
     },
     {
       nombre:'TypeScript',
-      src:'../../assets/img/typescript.png',
+      src:'assets/img/typescript.png',
       description:[
         "Interfaces",
         "Funciones con TS",
@@ -210,7 +210,7 @@ export class MainComponent {
     },
     {
       nombre:'Ionic',
-      src:'../../assets/img/ionic.png',
+      src:'assets/img/ionic.png',
       description:[
         "Estructuracion del proyecto",
         "Estructura de las vistas",
@@ -237,7 +237,7 @@ export class MainComponent {
     },
     {
       nombre:'Electron',
-      src:'../../assets/img/electron.png',
+      src:'assets/img/electron.png',
       description:[
         "Webcontent",
         "Eventos y metodos de Electron",
@@ -255,7 +255,7 @@ export class MainComponent {
     },
     {
       nombre:'Angular',
-      src:'../../assets/img/angular.png',
+      src:'assets/img/angular.png',
       description:[
         "Patron MVC",
         "Componentes",
@@ -281,7 +281,7 @@ export class MainComponent {
     },
     {
       nombre:'NodeJS',
-      src:'../../assets/img/nodejs.png',
+      src:'assets/img/nodejs.png',
       description:[
         "Descarga de paquetes",
         "Uso de librerias de NPM",
@@ -291,7 +291,7 @@ export class MainComponent {
     },
     {
       nombre:'Sass',
-      src:'../../assets/img/sass.png',
+      src:'assets/img/sass.png',
       description:[
         "Anidamiento",
         "Importes y extensiones",
