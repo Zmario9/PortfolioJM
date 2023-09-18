@@ -310,19 +310,19 @@ certsCadif1 =[
     name:'Programador',
     color:'btn-success',
     id:"1",
-    source:"../../assets/img/fundamentos.jpg"
+    source:"assets/img/fundamentos.jpg"
   },
   {
     name:'Desarrollador Front-End Junior',
     color:'btn-warning',
     id:"2",
-    source:"../../assets/img/junior.jpg"
+    source:"assets/img/junior.jpg"
   },
   {
     name:'Desarrollador Front-End Master',
     color:'btn-danger',
     id: "3",
-    source:"../../assets/img/master.jpg"
+    source:"assets/img/master.jpg"
   }
 ];
 
