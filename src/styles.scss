@@ -6,6 +6,7 @@
  
 @import 'node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss';
 html{
+    scrollbar-gutter: stable;
     body{
         // background-color: rgba(63,94,251,1);
         background-image: url("./assets/img/space2Front.jpg");
