@@ -6,9 +6,11 @@
  
 @import 'node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss';
 html{
-    scrollbar-gutter: stable;
+    // width: 100%;
     body{
-        // background-color: rgba(63,94,251,1);
+        width: 100%;
+        padding-right: 0 !important; 
+        // overflow: overlay !important;
         background-image: url("./assets/img/space2Front.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -16,3 +18,27 @@ html{
         background-attachment: fixed;
     }
 }
+//PONER ANTERIOR A ESTE LA ETIQUETA BODY PARA QUE SOLO AFECTE EL BODY
+//Aqui controlar todo el scrollbar
+body::-webkit-scrollbar{
+    width: 1em;
+}
+
+//La barra con la que haces el scroll
+body::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background-color: rgb(3, 7, 27);
+    border: .25em solid rgb(9, 19, 36);
+    &:hover{
+        background-color: #10212D;
+    }
+}
+
+//Maneja el scroll
+body::-webkit-scrollbar-track{
+    background-color: #1f2f52;
+}
+
+// ::-webkit-scrollbar { 
+//     display: none; 
+// }

@@ -48,7 +48,7 @@ export class MainComponent {
           originBtn: "certsBtn"
         },
         //centra el modal
-        modalClass: 'modal-dialog-centered modal-lg' 
+        modalClass: 'modal-dialog-centered modal-lg'
       });
     }
 
@@ -82,7 +82,7 @@ export class MainComponent {
           //Descripcion de los conocimientos obtenidos sobre esta rama
           desc: descripcion
         },
-        // modalClass:"modal-dialog-scrollable"
+        modalClass: 'modal-dialog-scrollable'
       });
     }
   }

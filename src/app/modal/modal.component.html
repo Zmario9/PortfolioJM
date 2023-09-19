@@ -1,6 +1,6 @@
 <!-- MODAL DE CERTIFICACIONES PARA EL MAIN COMPONENT -->
-<div *ngIf="path === '/home' && originBtn === 'certsBtn'">
-  <div class="modal-header {{bgColor}}">
+<!-- <div *ngIf="path === '/home' && originBtn === 'certsBtn'"> -->
+  <div class="modal-header {{bgColor}}" *ngIf="path === '/home' && originBtn === 'certsBtn'">
     <h5 class="modal-title {{titleColor}}" id="exampleModalLabel">{{ title }}</h5>
     <button
       type="button"
@@ -9,14 +9,14 @@
       (click)="modalRef.close()"
     ></button>
   </div>
-  <div class="modal-body {{bgColor}}">
+  <div class="modal-body {{bgColor}}" *ngIf="path === '/home' && originBtn === 'certsBtn'">
     <img src="{{ src }}" class="img-fluid" alt="..." />
   </div>
-</div>
+<!-- </div> -->
 
 <!-- MODAL DE CONOCIMIENTOS PARA EL MAIN COMPONENT -->
-<div *ngIf="path === '/home' && originBtn === 'btnKnows'">
-  <div class="modal-header modalKnowsModal">
+<!-- <div *ngIf="path === '/home' && originBtn === 'btnKnows'"> -->
+  <div class="modal-header modalKnowsModal" *ngIf="path === '/home' && originBtn === 'btnKnows'">
     <img id="mdlKnowImg" src="{{src}}" alt="">
     <h5 class="modal-title text-info" id="exampleModalLabel">{{name}}</h5>
     <button
@@ -26,7 +26,7 @@
       (click)="modalRef.close()"
     ></button>
   </div>
-  <div class="modal-body modalKnowsModal">
+  <div class="modal-body modalKnowsModal" *ngIf="path === '/home' && originBtn === 'btnKnows'">
     <table class="table">
       <thead>
         <tr>
@@ -42,9 +42,9 @@
       </tbody>
     </table>
   </div>
-  <div class="modal-footer modalKnowsModal">
+  <div class="modal-footer modalKnowsModal" *ngIf="path === '/home' && originBtn === 'btnKnows'">
     <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
       Cerrar
     </button>
   </div>
-</div>
+<!-- </div> -->
