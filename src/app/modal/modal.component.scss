@@ -8,9 +8,30 @@
     }
 }
 
+.modal-header, .modal-body, .modal-footer{
+    font-family: orangekid;
+}
+
 .modalKnowsModal {
     h5{
         margin-left: 1vh;
     }
     background-color: rgb(66, 83, 83);
+}
+
+@media only screen and (max-width: 280px){
+    .table{
+        font-size: 1em;
+    }
+}
+@media only screen and (min-width: 281px) and (max-width: 500px){
+    .table{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 501px){
+    .table{
+        font-size: 1.8em;
+    }
 }

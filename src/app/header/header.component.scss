@@ -100,11 +100,16 @@ header{
         }
     }
 }
-//------------------------------------------- MAIN -------------------------------------------
+//------------------------------------------- HEADER MEDIA QUERIES-------------------------------------------
 
 /*Header for Mobile (small ones)*/
 @media only screen and (max-width: 360px){ //should be 280px
     header{
+        // height: 180px;
+        height: 100px;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
         #langChanger{
             position: absolute;
             bottom: 70%;
@@ -113,10 +118,6 @@ header{
             height: 50px;
             appearance: none;
         }
-        height: 180px;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
         #maxWidth{
             flex-flow: column nowrap;
             align-items: center;
@@ -140,8 +141,12 @@ header{
             }
     
             ul{
+                // width: 98%;
+                // height: 30%;
                 width: 98%;
-                height: 30%;
+                height: 7%;
+                position: fixed;
+                bottom: 5%;
                 li{
                     width: 24%;
                     height: 75%;
@@ -177,8 +182,12 @@ header{
                 }
             }
             ul{
+                // width: 98%;
+                // height: 30%;
                 width: 98%;
-                height: 30%;
+                height: 7%;
+                position: fixed;
+                bottom: 5%;
                 li{
                     width: 25%;
                     height: 80%;
