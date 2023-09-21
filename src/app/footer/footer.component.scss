@@ -4,15 +4,21 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: -1px;
-    height: 10vh;
-    padding: {
-        bottom: 5em;
-    }
+    height: 5vh;
     background: linear-gradient(0deg, #11232F 74%, transparent 100%);
     font-size: .8em;
     p{
         margin: 0;
         font-family: orangekid;
         color: white;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    footer{
+        height: 10vh;
+        padding: {
+            bottom: 5em;
+        }
     }
 }

@@ -337,26 +337,56 @@ certsCadif1 =[
       typeSpeed: 60,
       loop: true 
     })
+    // console.log("tipo de navegador: " + navigator.userAgent);
+    // console.log(detectMob());
     
-
-  writer1
-  .type('Soy un desarrollador web ')
-  .removeCursor()
-  .then(writer2.start.bind(writer2))
-  .start();
+  if (detectMob()){
+    console.log('movil');
+    writer1
+    .type('Soy un dev de ')
+    .removeCursor()
+    .then(writer2.start.bind(writer2))
+    .start();
+  } else {
+    console.log('pc');
+    writer1
+    .type('Soy un desarrollador de ')
+    .removeCursor()
+    .then(writer2.start.bind(writer2))
+    .start();
+  }
 
   writer2
   .changeTypeColor('purple')
-  .type("FrontEnd")
+  .type("paginas web")
   .rest(2000)
   .clear()
   .changeTypeColor('aqua')
-  .type("BackEnd")
+  .type("videojuegos")
   .rest(2000)
   .clear()
   .changeTypeColor('yellow')
-  .type("Fullstack")
+  .type("aplicaciones mobiles")
   .rest(4000)
   .clear();
   }
+}
+
+//Funciones ajenas
+
+//Detecta si el tipo de dispositivo usado es mobile o no.
+function detectMob() {
+  const toMatch = [
+      /Android/i,
+      /webOS/i,
+      /iPhone/i,
+      /iPad/i,
+      /iPod/i,
+      /BlackBerry/i,
+      /Windows Phone/i
+  ];
+  
+  return toMatch.some((toMatchItem) => {
+      return navigator.userAgent.match(toMatchItem);
+  });
 }
