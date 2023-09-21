@@ -4,7 +4,10 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: -1px;
-    height: 5vh;
+    height: 10vh;
+    padding: {
+        bottom: 5em;
+    }
     background: linear-gradient(0deg, #11232F 74%, transparent 100%);
     font-size: .8em;
     p{
