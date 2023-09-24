@@ -52,8 +52,8 @@
 //-------------------------------------------- HEADER -----------------------------------------
 header{
     display: flex;
-    position:sticky;
-    top: 0;
+    // position:sticky;
+    // top: 0;
     z-index: 1000;
     // background: linear-gradient(0deg, transparent 10%, #11232F 100%);
     background: linear-gradient(0deg, transparent 1%,  rgba(17,35,47,1) 99%);
@@ -154,13 +154,14 @@ header{
                 height: 7%;
                 position: fixed;
                 bottom: 0%;
-                background: linear-gradient(0deg, transparent 10%, rgba(49,164,250,1) 21%, transparent 89%);
+                background: linear-gradient(0deg, rgba(49,164,250,1) 21%, transparent 89%);
                 align-items: end;
                 li{
                     width: 24%;
                     height: 75%;
                     font-size: 1.1em;
                     background-color: #10222D;
+                    // border: 1px solid aquamarine !important;
                 }     
             }
         }
@@ -172,7 +173,6 @@ header{
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        height: 180px;
         #maxWidth{
             flex-flow: column nowrap;
             justify-content: center;
@@ -198,7 +198,7 @@ header{
                 height: 7%;
                 position: fixed;
                 bottom: 0%;
-                background: linear-gradient(0deg, transparent 10%, rgba(49,164,250,1) 21%, transparent 89%);
+                background: linear-gradient(0deg, rgba(49,164,250,1) 21%, transparent 89%);
                 align-items: end;
                 li{
                     width: 25%;
@@ -216,9 +216,13 @@ header{
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        height: 100px;
         padding-left: 5%;
         padding-right: 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        // height: 180px;
+        height: 100px;
         #maxWidth{
             flex-flow: row nowrap;
             justify-content: space-between;

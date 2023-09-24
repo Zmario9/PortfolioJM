@@ -19,8 +19,14 @@ export class HeaderComponent {
     .start();
   }
 
-  goToHome(){
-    console.log("funciona");
-    this.route.navigate(["/home"]);
+  goTo(event){
+    event.preventDefault();
+    // console.log("funciona");
+    // console.log(event);
+    console.log(event.srcElement.innerText);
+    switch(event.srcElement.innerText){
+      case "inicio": console.log(`ir a ${event.srcElement.innerText}`); this.route.navigateByUrl('/home'); break;  //si se quiere ir a home, esta es la forma
+      case "proyectos": console.log(`ir a ${event.srcElement.innerText}`); this.route.navigateByUrl('/projects'); break;
+    }
   }
 }

@@ -1,0 +1,50 @@
+main {
+    display: flex;
+    .projects{
+        font-family: orangekid;
+        img{
+
+        }
+        .projectContext{
+            display: flex;
+            button{
+                z-index: -1;
+            }
+        }
+    }
+}
+
+//MEDIA QUERIES
+@media only screen and (max-width: 360px){
+    main{
+        flex-flow: wrap column;
+        align-items: center;
+        .projects{
+            font-family: orangekid;
+            width: 90%;
+            margin: {
+                bottom: 1em;
+            }
+            img{
+                width: 100%;
+                max-height:162px;
+            }
+            .projectContext{
+                flex-flow: wrap column;
+                align-items: center;
+                font-size: 1.2em;
+                padding: {
+                    bottom: 0.5em;
+                    left: 0.3em;
+                    right: 0.3em;
+                }
+                button{
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+// background: #10212D;
+// background: rgba(transparent, 0.5);

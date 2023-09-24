@@ -27,6 +27,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ModalComponent } from './modal/modal.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
