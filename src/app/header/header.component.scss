@@ -54,7 +54,7 @@ header{
     display: flex;
     // position:sticky;
     // top: 0;
-    z-index: 1000;
+    z-index: 500;
     // background: linear-gradient(0deg, transparent 10%, #11232F 100%);
     background: linear-gradient(0deg, transparent 1%,  rgba(17,35,47,1) 99%);
     #maxWidth{
@@ -75,6 +75,7 @@ header{
             display: flex;
             justify-content:space-between;
             align-items: center; 
+            z-index: 500;
             margin: {
                 top: 10px;
                 bottom: 0; 
