@@ -1,11 +1,15 @@
 <app-header></app-header>
 <main>
     <h2 class="text-light">Paginas web</h2>
-    <div class="projects border border-4 border-info rounded" *ngFor="let project of projects; let i = index">
-        <img src="{{project.src}}" alt="Fissure in Sandstone"/>
-        <div class="projectContext">
-            <h2 class="text-secondary">{{project.titulo}}</h2>
-            <p class="text-light">{{[project.description]}}</p>
+    <div id="contextFlex">
+        <div class="projects border border-4 border-info rounded" *ngFor="let project of projects; let i = index">
+            <div class="projectContext">
+                <img src="{{project.src}}" alt="Fissure in Sandstone"/>
+                <div class="textContext">
+                    <h2 class="text-secondary">{{project.titulo}}</h2>
+                    <p class="text-light">{{[project.description]}}</p>
+                </div>
+            </div>
             <button type="button" class="btn btn-info" mdbRipple>Ver proyecto</button>
         </div>
     </div>
