@@ -67,12 +67,29 @@ export class ProjectsComponent {
                   `,
       src:"assets/projectImgs/PortfolioTemplate3.PNG"
     }
+  ];
+  projectsGame = [
+    {
+      titulo: "Juego de memoria",
+      description: `
+                     Es el primer videojuego que hago usando html, css y en este caso angular con typescript.
+                   `,
+      src:"assets/projectImgs/MemoryCard.PNG"
+    }
   ]
   //Servicio de modal y ruta.
   constructor(private modalService: MdbModalService, private router: Router) {}
 
 
   openModalProjects(evento){
+    const ruta = this.router.url;
     console.log("a")
+    this.modalRef = this.modalService.open(ModalComponent,{
+      data:{
+        path: ruta
+      },
+      //centra el modal
+      modalClass: 'modal-dialog-centered modal-lg'
+    });
   }
 }

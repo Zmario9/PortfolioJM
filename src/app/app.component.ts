@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
+import { ViewportScroller } from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PortfolioJM';
+  constructor(private scroller: ViewportScroller, private router: Router) {}
+  ngOnInit(){
+    this.router.navigate(["/home"]);
+  }
 }

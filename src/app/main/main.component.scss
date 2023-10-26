@@ -60,22 +60,32 @@ main{
                 color: yellow;
             }
         }
+        #contacts {
+            display: flex;
+            .contactOption{
+                display: flex;
+                h3 {
+                    color: white;
+                    font-family: orangekid;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 360px){ //should be 280px
     main{
-        //height: 160vh;
         #textoAnimado {
             #animatedText1, #animatedText2{
                 margin: 0;
                 font-family: orangekid;
-                font-size: 1.5em;
+                // font-size: 1.5em;
+                font-size: 8vw;
             }
         }
         .parent {
             flex-flow: nowrap column;  
-            //height: 500px;
             align-items: center;
             span{
                 font-size: 1.5em;         
@@ -135,10 +145,34 @@ main{
                     .certificados{
                         button{
                             margin-bottom: 10px;
+                            font-size: 0.7em;
                         }
                     }
                 }
             } 
+            #contacts{
+                width: 100%;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                .contactOption{
+                    flex-flow: row nowrap;
+                    width: 60%;
+                    height: 7vh;
+                    justify-content: space-between;
+                    align-items: center;
+                    h3{
+                        margin: 0;
+                        line-height: 2.3 !important;
+                        width: 83%;
+                    }
+                    img{
+                        height: 70%;
+                        object-position: left 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
         }
     }
 }
@@ -152,7 +186,6 @@ main{
         }
         .parent{
             flex-flow: nowrap column;
-            //height: 200vh;
             align-items: center;
             span{
                 color:aqua;
@@ -199,7 +232,7 @@ main{
                 align-items: center;
                 width: 100%;
                 padding: {
-                    bottom: 3em;
+                    // bottom: 1em;
                 }
                 #cadif1{
                     flex-flow: nowrap column;
@@ -221,15 +254,30 @@ main{
                     }
                 }
             } 
-        }
-    }
-}
-
-@media only screen and (min-width: 700px){
-    #AboutMe{
-        padding: {
-            right: 10%;
-            left: 10%;
+            #contacts{
+                width: 100%;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                .contactOption{
+                    flex-flow: row nowrap;
+                    width: 60%;
+                    height: 7vh;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-width: 200px;
+                    h3{
+                        margin: 0;
+                        line-height: 2.3 !important;
+                        width: 83%;
+                    }
+                    img{
+                        height: 70%;
+                        object-position: left 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
         }
     }
 }
@@ -240,6 +288,12 @@ main{
             span{
                 font-size: 3em;
             }
+        }
+    }
+    #AboutMe{
+        padding: {
+            right: 10%;
+            left: 10%;
         }
     }
 }

@@ -42,9 +42,19 @@
                     - Obtencion de los certificados de:
                 </p>
                 <div class="certificados" *ngFor="let certs of certsCadif1; let i=index">
-                    <!-- <p style="color: {{certs.color}}">{{certs.name}}</p> -->
                     <button type="button" id="{{certs.id}}" (click)="openModalMain($event)" class="btn {{certs.color}} certsBtn" mdbRipple>{{certs.name}}</button>
                 </div>
+            </div>
+       </article>
+       <article id="contacts">
+            <span>Contactos</span>
+            <div class="contactOption">
+                <img src="assets/img/whatsapp.png" alt="WhatsApp">
+                <h3>+58 04145707171</h3>
+            </div>
+            <div class="contactOption">
+                <img src="assets/img/discord.png" alt="Discord">
+                <h3>thelostmagician</h3>
             </div>
        </article>
     </section>
