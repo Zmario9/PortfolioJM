@@ -7,11 +7,10 @@
 @import 'node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss';
 html{
     // width: 100%;
+    min-height: 100%;
+    position: relative;
     body{
         width: 100%;
-        // display: flex;
-        // flex-flow: nowrap column;
-        // justify-content: center;
         padding-right: 0 !important; 
         background-image: url("./assets/img/space2Front.jpg");
         background-repeat: no-repeat;

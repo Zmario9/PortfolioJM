@@ -86,6 +86,23 @@ export class MainComponent {
       });
     }
   }
+  contactos = [
+    {
+      dato: "Link pronto...",
+      icon: "assets/img/fiverr.png",
+      alt: "Fiverr"
+    },
+    {
+      dato: "+58 04145707171",
+      icon: "assets/img/whatsapp.png",
+      alt: "Whatspp"
+    },
+    {
+      dato: "thelostmagician",
+      icon: "assets/img/discord.png",
+      alt: "Discord"
+    }
+  ]
   conocimientos = [
     {
       nombre:'HTML5',

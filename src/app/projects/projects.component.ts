@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { Router } from '@angular/router';
+
+
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -51,7 +54,7 @@ export class ProjectsComponent {
       src: "assets/projectImgs/AgentesWeb.PNG"
     },
     {
-      titulo: "Portafolio simple responsive",
+      titulo: "Portafolio simple",
       description:`
                     Otro de mis proyectos favoritos, un portafolio responsive hecho enteramente en CSS.
                     Se puede ver en cualquier dispositivo
@@ -59,7 +62,7 @@ export class ProjectsComponent {
       src: "assets/projectImgs/Portfolio1Template.PNG"
     },
     {
-      titulo: "Modelo 2 de Portafolio responsive",
+      titulo: "Modelo 2 de Portafolio",
       description:`
                     Mi primer intento de hacer un portafolio responsive minimalista hecho con ciertas
                     imagenes customizadas que son mas que nada un placeholder que me resultaron agradables
@@ -80,6 +83,9 @@ export class ProjectsComponent {
   //Servicio de modal y ruta.
   constructor(private modalService: MdbModalService, private router: Router) {}
 
+  ngOnInit(){
+    scrollHorizontal(".contextFlex");
+  }
 
   openModalProjects(evento){
     const ruta = this.router.url;
@@ -92,4 +98,20 @@ export class ProjectsComponent {
       modalClass: 'modal-dialog-centered modal-lg'
     });
   }
+}
+
+//FUNCIONES
+function scrollHorizontal(element){
+  const scrollable:any = document.querySelector(element);
+  console.log("proyecto cargado");
+  scrollable?.addEventListener("wheel",function(e){
+    // console.log(e + "funcionaaaa");
+    e.preventDefault();
+    // scrollable.scrollLeft += e.deltaY;
+    if(e.wheelDelta>0){
+      return scrollable.scrollLeft -= 50;
+    } else {
+      return scrollable.scrollLeft += 50;
+    }
+  });
 }

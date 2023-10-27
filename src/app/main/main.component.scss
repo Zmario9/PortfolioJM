@@ -2,7 +2,6 @@
 
 main{
     margin-top: -1px;
-    // background-color: rgba(63,94,251,1);
     #textoAnimado{
         display: flex;
         justify-content: center;
@@ -76,6 +75,9 @@ main{
 
 @media only screen and (max-width: 360px){ //should be 280px
     main{
+        margin: {
+            bottom: 25%;
+        }
         #textoAnimado {
             #animatedText1, #animatedText2{
                 margin: 0;
@@ -177,7 +179,8 @@ main{
     }
 }
 
-@media only screen and (min-width:361px) /*and (max-width: 768px)*/{
+//REPARAR QUERY A PARTIR DE 769px
+@media only screen and (min-width:361px) {//and (max-width: 768px)
     main{
         #textoAnimado {
             #animatedText1, #animatedText2{
@@ -282,18 +285,18 @@ main{
     }
 }
 
-@media only screen and (min-width: 600px){
-    main{
-        .parent{
-            span{
-                font-size: 3em;
-            }
+@media only screen and (min-width:362px) and (max-width: 700px){
+    main {
+        margin: {
+            bottom: 20%;
         }
     }
-    #AboutMe{
-        padding: {
-            right: 10%;
-            left: 10%;
+}
+
+@media only screen and (min-width:701px) {
+    main {
+        margin: {
+            bottom: 5%;
         }
     }
 }
