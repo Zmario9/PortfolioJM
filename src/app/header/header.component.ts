@@ -9,24 +9,14 @@ import Typewriter from 't-writer.js';
 })
 export class HeaderComponent {
   constructor(private route: Router,private scroller: ViewportScroller ){}
-  // ngOnInit():void {
-  //   const target = document.querySelector('#owner');
-  //   const writeOwner1 = new Typewriter(target,{
-  //     typeColor: 'red',
-  //   })
-
-  //   writeOwner1
-  //   .type('Magus Developer')
-  //   .start();
-  // }
   goTo(event){
     // event.preventDefault();
-    console.log("funciona");
-    console.log(event);
-    console.log(event.srcElement.innerText);
+    // console.log("funciona");
+    // console.log(event);
+    // console.log(event.srcElement.innerText);
     switch(event.srcElement.innerText){
-      case "inicio": console.log(`ir a ${event.srcElement.innerText}`); this.route.navigateByUrl('/home'); break;  //si se quiere ir a home, esta es la forma
-      case "proyectos": console.log(`ir a ${event.srcElement.innerText}`); this.route.navigateByUrl('/projects'); break;
+      case "inicio":  this.route.navigateByUrl('/home'); break;  //si se quiere ir a home, esta es la forma
+      case "proyectos":  this.route.navigateByUrl('/projects'); break;
     }
     setTimeout(()=>{
       this.scroller.scrollToPosition([0,0]);

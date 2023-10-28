@@ -123,7 +123,7 @@ export class ProjectsComponent {
 //FUNCIONES
 function scrollHorizontal(element){
   const scrollable:any = document.querySelector(element);
-  console.log("proyecto cargado");
+  // console.log("proyecto cargado");
   scrollable?.addEventListener("wheel",function(e){
     // console.log(e + "funcionaaaa");
     e.preventDefault();

@@ -58,15 +58,15 @@ export class MainComponent {
       //Debo reparar esto
       let descripcion: any;
       //let descripcion: string;
-      console.log(evento.srcElement.src);
-      console.log(ruta);
+      // console.log(evento.srcElement.src);
+      // console.log(ruta);
       // console.log(evento.srcElement.className.includes("btnKnows"));
-      console.log("funciona");
+      // console.log("funciona");
       this.conocimientos.forEach(element => {
         if (evento.srcElement.alt === element.nombre){
           // console.log(`${evento.srcElement.alt} = ${element.nombre}`);
           descripcion = element.description;
-          console.log(descripcion);
+          // console.log(descripcion);
         }
       });
       this.modalRef = this.modalService.open(ModalComponent,{
@@ -358,14 +358,14 @@ certsCadif1 =[
     // console.log(detectMob());
     
   if (detectMob()){
-    console.log('movil');
+    // console.log('movil');
     writer1
     .type('Soy un dev de ')
     .removeCursor()
     .then(writer2.start.bind(writer2))
     .start();
   } else {
-    console.log('pc');
+    // console.log('pc');
     writer1
     .type('Soy un desarrollador de ')
     .removeCursor()
