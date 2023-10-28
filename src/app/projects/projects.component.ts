@@ -86,7 +86,7 @@ export class ProjectsComponent {
                      Es el primer videojuego que hago usando html, css y en este caso angular con typescript.
                    `,
       src:"assets/projectImgs/MemoryCard.PNG",
-      gifSrc:"assets/projectsGif/"
+      gifSrc:"assets/projectsGif/MemoryCard.gif"
     }
   ]
   //Servicio de modal y ruta.
