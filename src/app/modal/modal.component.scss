@@ -2,6 +2,33 @@
 //     background-color: aquamarine;
 // }
 
+// #modal-projects-header, #modal-projects-body, #modal-projects-footer{
+    // background: #10212D;
+    // background: rgba(transparent, 0.3);
+// }
+
+#projectsModalHeader, #projectsModalbody, #projectsModalFooter{
+    background-color: #10212D;
+}
+
+#projectsModalbody{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+#projectsModalFooter{
+    display: flex;
+    justify-content: center;
+    span {
+        font-size: 4vh;
+    }
+    button{
+        font-size: 3vh;
+    }
+}
+
 .modal-header{
     #mdlKnowImg{
         height: 3em;
@@ -10,13 +37,14 @@
 
 .modal-header, .modal-body, .modal-footer{
     font-family: orangekid;
+    background-color: #10212D;
 }
 
 .modalKnowsModal {
     h5{
         margin-left: 1vh;
     }
-    background-color: rgb(66, 83, 83);
+    // background-color: rgb(66, 83, 83);
 }
 
 @media only screen and (max-width: 280px){

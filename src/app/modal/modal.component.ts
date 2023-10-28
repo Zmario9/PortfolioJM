@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
+import { Router } from '@angular/router';
+import { ViewportScroller } from "@angular/common";
 
 @Component({
   selector: 'app-modal',
@@ -15,5 +17,14 @@ export class ModalComponent {
   originBtn: string | null = null;
   name: string | null = null;
   desc: Array<string> | null = null;
-  constructor(public modalRef: MdbModalRef<ModalComponent>) {}
+  gif: string | null = null;
+  constructor(public modalRef: MdbModalRef<ModalComponent>, private route:Router, private scroller: ViewportScroller) {}
+
+  goToContacts() {
+    this.modalRef.close();
+    this.route.navigateByUrl('/home');
+    setTimeout(()=>{
+      this.scroller.scrollToAnchor("contacts");
+    },100);
+  }
 }

@@ -10,7 +10,7 @@
                     <p class="text-light">{{[project.description]}}</p>
                 </div>
             </div>
-            <button (click)="openModalProjects($event)" type="button" class="btn btn-info" mdbRipple>Ver proyecto</button>
+            <button id="{{project.titulo}}" (click)="openModalProjects($event, projects)" type="button" class="btn btn-info" mdbRipple>Ver proyecto</button>
         </div>
     </div>
     <h2 class="text-light">Juegos</h2>
@@ -23,7 +23,7 @@
                     <p class="text-light">{{[project2.description]}}</p>
                 </div>
             </div>
-            <button (click)="openModalProjects($event)" type="button" class="btn btn-info" mdbRipple>Ver proyecto</button>
+            <button id="{{project2.titulo}}" (click)="openModalProjects($event,projectsGame)" type="button" class="btn btn-info" mdbRipple>Ver proyecto</button>
         </div>
     </div>
 </main>

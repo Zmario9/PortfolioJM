@@ -1,6 +1,6 @@
 <!-- MODAL DE CERTIFICACIONES PARA EL MAIN COMPONENT -->
 <!-- <div *ngIf="path === '/home' && originBtn === 'certsBtn'"> -->
-  <div class="modal-header {{bgColor}}" *ngIf="path === '/home' && originBtn === 'certsBtn'">
+  <div class="modal-header {{bgColor}} border border-dark border-5" *ngIf="path === '/home' && originBtn === 'certsBtn'">
     <h5 class="modal-title {{titleColor}}" id="exampleModalLabel">{{ title }}</h5>
     <button
       type="button"
@@ -9,7 +9,7 @@
       (click)="modalRef.close()"
     ></button>
   </div>
-  <div class="modal-body {{bgColor}}" *ngIf="path === '/home' && originBtn === 'certsBtn'">
+  <div class="modal-body {{bgColor}} border border-dark border-5" *ngIf="path === '/home' && originBtn === 'certsBtn'">
     <img src="{{ src }}" class="img-fluid" alt="..." />
   </div>
 <!-- </div> -->
@@ -48,8 +48,8 @@
     </button>
   </div>
 <!--MODAL DE PROYECTOS-->
-<div class="modal-header" *ngIf="path === '/projects'">
-  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+<div id="projectsModalHeader" class="modal-header border border-info border-5" *ngIf="path === '/projects'">
+  <h5 class="modal-title text-light" id="exampleModalLabel">{{name}}</h5>
   <button
     type="button"
     class="btn-close"
@@ -57,10 +57,13 @@
     (click)="modalRef.close()"
   ></button>
 </div>
-<div class="modal-body" *ngIf="path === '/projects'">...</div>
-<div class="modal-footer" *ngIf="path === '/projects'">
-  <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
+<div id="projectsModalbody" class="modal-body border border-info border-5" *ngIf="path === '/projects'">
+  <img src="{{gif}}" alt="{{name}}">
+</div>
+<div id="projectsModalFooter" class="modal-footer border border-info border-5" *ngIf="path === '/projects'">
+  <!-- <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
     Close
-  </button>
-  <button type="button" class="btn btn-primary">Save changes</button>
+  </button> -->
+  <span class="text-light">Te gusta lo que ves?...</span>
+  <button (click)="goToContacts()" type="button" class="btn btn-info">¡Contáctame!</button>
 </div>

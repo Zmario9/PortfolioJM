@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+  [x: string]: any; //para poder aplicar variable de arreglos
   modalRef: MdbModalRef<ModalComponent> | null = null;
   projects = [
     {
@@ -19,7 +20,8 @@ export class ProjectsComponent {
                     Uno de los primeros proyectos hechos con SCSS, un modelo de pagina web de construccion de 
                     casas que nos fue pedido en uno de los trabajos que he hecho tambien que pude confeccionar.
                   `,
-      src: "assets/projectImgs/buildHouse.PNG"
+      src: "assets/projectImgs/buildHouse.PNG",
+      gifSrc:"assets/projectsGif/BuildingAHouse.gif"
     },
     {
       titulo: "Natural Foods",
@@ -27,14 +29,16 @@ export class ProjectsComponent {
                     Otro modelo hecho enteramente con SCSS, un modelo de pagina web de comidas naturales que se 
                     me mando a maquetar.
                   `,
-      src: "assets/projectImgs/naturalFoods.PNG"
+      src: "assets/projectImgs/naturalFoods.PNG",
+      gifSrc:"assets/projectsGif/NaturalFoods.gif"
     },
     {
       titulo: "Education Page",
       description:`
                     Modelo web de una pagina de educacion infantil hecho enteramente por SCSS
                   `,
-      src: "assets/projectImgs/EducationPage2.PNG"
+      src: "assets/projectImgs/EducationPage2.PNG",
+      gifSrc:"assets/projectsGif/EducationBoring.gif"
     },
     {
       titulo: "Prototipo tienda de ventas",
@@ -42,7 +46,8 @@ export class ProjectsComponent {
                     Uno de los proyectos mas divertidos que hice con angular, un clon de mercadolibre donde
                     al seleccionar un producto se mostraban sus caracteristicas, precio y demas!
                   `,
-      src: "assets/projectImgs/ClonePrototypeShop.PNG"
+      src: "assets/projectImgs/ClonePrototypeShop.PNG",
+      gifSrc:"assets/projectsGif/MercadoLibreClone.gif"
     },
     {
       titulo: "Agencia de Marketing",
@@ -51,7 +56,8 @@ export class ProjectsComponent {
                     relacionados con el Marketing Digital, uno de mis proyectos favoritos hechos enteramente
                     en CSS
                   `,
-      src: "assets/projectImgs/AgentesWeb.PNG"
+      src: "assets/projectImgs/AgentesWeb.PNG",
+      gifSrc:"assets/projectsGif/AgenciaOK.gif"
     },
     {
       titulo: "Portafolio simple",
@@ -59,7 +65,8 @@ export class ProjectsComponent {
                     Otro de mis proyectos favoritos, un portafolio responsive hecho enteramente en CSS.
                     Se puede ver en cualquier dispositivo
                   `,
-      src: "assets/projectImgs/Portfolio1Template.PNG"
+      src: "assets/projectImgs/Portfolio1Template.PNG",
+      gifSrc:"assets/projectsGif/PortfolioModel.gif"
     },
     {
       titulo: "Modelo 2 de Portafolio",
@@ -68,7 +75,8 @@ export class ProjectsComponent {
                     imagenes customizadas que son mas que nada un placeholder que me resultaron agradables
                     de ver.
                   `,
-      src:"assets/projectImgs/PortfolioTemplate3.PNG"
+      src:"assets/projectImgs/PortfolioTemplate3.PNG",
+      gifSrc:"assets/projectsGif/PortfolioModel2.gif"
     }
   ];
   projectsGame = [
@@ -77,7 +85,8 @@ export class ProjectsComponent {
       description: `
                      Es el primer videojuego que hago usando html, css y en este caso angular con typescript.
                    `,
-      src:"assets/projectImgs/MemoryCard.PNG"
+      src:"assets/projectImgs/MemoryCard.PNG",
+      gifSrc:"assets/projectsGif/"
     }
   ]
   //Servicio de modal y ruta.
@@ -87,12 +96,23 @@ export class ProjectsComponent {
     scrollHorizontal(".contextFlex");
   }
 
-  openModalProjects(evento){
+  openModalProjects(evento: any, array: any){
+    const eventAlt = evento.srcElement.id;
     const ruta = this.router.url;
-    console.log("a")
+    let titleProject: any;
+    let projectGif: any;
+    array.forEach((element:any)=>{
+      if (element.titulo === eventAlt){
+        titleProject = eventAlt;
+        projectGif = element.gifSrc;
+      }
+    });
+    // console.log(titleProject);
     this.modalRef = this.modalService.open(ModalComponent,{
       data:{
-        path: ruta
+        path: ruta,
+        name: titleProject,
+        gif: projectGif
       },
       //centra el modal
       modalClass: 'modal-dialog-centered modal-lg'

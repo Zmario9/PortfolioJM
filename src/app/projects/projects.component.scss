@@ -31,7 +31,9 @@ main {
 //MEDIA QUERIES
 @media only screen and (max-width: 367px){ //max-width era de 360px, ideal 416px
     main{
-
+        margin: {
+            bottom: 20%;
+        }
         flex-flow: wrap column;
         align-items: center;
         .contextFlex{
